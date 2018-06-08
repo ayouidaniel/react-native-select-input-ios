@@ -4,6 +4,7 @@
  */
 
 import { Component } from 'react';
+import { compact } from 'lodash/array'
 
 class AbstractSelectInput extends Component {
 
@@ -45,7 +46,7 @@ class AbstractSelectInput extends Component {
       }
     });
 
-    return label || '';
+    return compact(label).length > 0 ? label : props.placeholder;
   }
 }
 
