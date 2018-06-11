@@ -10,7 +10,7 @@ import styles from './../../stylesheets/selectInputIOS.css.js';
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import { Text, TouchableWithoutFeedback, View, ViewPropTypes } from 'react-native';
+import { Text, TouchableOpacity, View, ViewPropTypes } from 'react-native';
 
 class SelectInput extends AbstractSelectInput {
   constructor(props) {
@@ -42,7 +42,7 @@ class SelectInput extends AbstractSelectInput {
 
     // TODO: - add fully customizable styles
     return (
-      <TouchableWithoutFeedback onPress={this.focus.bind(this)}>
+      <TouchableOpacity onPress={this.focus.bind(this)}>
         <View style={props.style}>
           <Text
             style={props.labelStyle || styles.defaultlabelstyle}
