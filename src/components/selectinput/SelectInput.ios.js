@@ -69,7 +69,7 @@ class SelectInput extends AbstractSelectInput {
             cancelKeyText={props.cancelKeyText}
           />
         </View>
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     );
   }
 }
